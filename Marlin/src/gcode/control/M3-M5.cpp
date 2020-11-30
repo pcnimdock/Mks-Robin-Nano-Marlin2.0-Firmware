@@ -110,6 +110,7 @@ void GcodeSuite::M3_M4(const bool is_M4) {
       cutter.set_power(cutter.upower_to_ocr(get_s_power()));
   #else
     cutter.set_enabled(true);
+    cutter.power_delay(true);
   #endif
   cutter.menuPower = cutter.unitPower;
 }
